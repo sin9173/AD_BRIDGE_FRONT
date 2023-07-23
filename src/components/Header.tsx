@@ -1,16 +1,27 @@
+import { Link } from "react-router-dom";
 import { CursorPointImg, CusorPointText, HeaderContainer, HeaderLogo, LoginBtn, TextHeaderBtn } from "../styles/HeaderStyles";
 
 
-const Header =  () => {
-    return <HeaderContainer>
+export interface HeaderProps {
+    bgColor : string;
+    color : string;
+    logo : string;
+}
+
+export const moveMain = () => {
+    window.location.href='/match/start';
+}
+
+const Header:React.FC<HeaderProps> =  (props) => {
+    return <HeaderContainer theme={{bgColor : props.bgColor, color:props.color}}>
             <TextHeaderBtn>
                 <CusorPointText>매칭서비스</CusorPointText>
             </TextHeaderBtn>
             <TextHeaderBtn>
-                <CusorPointText>기업소개</CusorPointText>
+                <CusorPointText onClick={moveMain}>기업소개</CusorPointText>
             </TextHeaderBtn>
             <HeaderLogo>
-                <CursorPointImg src='/images/sample.png' alt="sample"/>
+                <a href="/"><CursorPointImg src={props.logo} alt="logo"/></a>
             </HeaderLogo>
 
             <LoginBtn>
