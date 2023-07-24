@@ -2,6 +2,10 @@ import Header from "../components/Header";
 import { AquaBtn, AquaBtnNonAbsolte, BackGroundImg, BackGroundUrl, MainAquaFont, MainWhiteFont } from "../styles/MainStyled";
 
 const Main = () => {
+
+    const moveMatch = () => {
+        window.location.href='/match/start';
+    }
     return <div>
         <Header bgColor="white" color="black" logo="/images/logo_black.png"/>
         <BackGroundUrl theme={{imgPath : ''}}>
@@ -13,7 +17,7 @@ const Main = () => {
                     <MainWhiteFont>기획해드립니다.</MainWhiteFont>
                 </div>
                 <div>
-                    <AquaBtnNonAbsolte>매칭서비스 이용하기</AquaBtnNonAbsolte>
+                    <AquaBtnNonAbsolte onClick={moveMatch} >매칭서비스 이용하기</AquaBtnNonAbsolte>
                 </div>
             </div>
         </BackGroundUrl>
@@ -28,7 +32,7 @@ const Main = () => {
         </BackGroundImg>
         <BackGroundImg>
             <img src="/images/main_4.jpg"></img>
-            <AquaBtn theme={{bottom : "150px"}}>매칭서비스 신청하기</AquaBtn>
+            <AquaBtn onClick={moveMatch} theme={{bottom : "150px"}}>매칭서비스 신청하기</AquaBtn>
         </BackGroundImg>
         <BackGroundImg>
             

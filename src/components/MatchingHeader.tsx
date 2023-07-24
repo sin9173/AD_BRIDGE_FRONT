@@ -1,10 +1,17 @@
-import { MatchingHeaderContainer, MatchingHeaderLogoDiv, MatchingStageDiv } from "../styles/matching/MatchingHeaderStyles";
+import { useNavigate } from "react-router-dom";
+import { MatchingExitBtn, MatchingHeaderContainer, MatchingHeaderLogoDiv, MatchingStageDiv } from "../styles/matching/MatchingHeaderStyles";
 
 
 const MatchingHeader = () => {
+
+    const navigate = useNavigate();
+
+    const exit = () => {        
+        navigate("/");
+    }
     return <MatchingHeaderContainer>
         <MatchingHeaderLogoDiv>
-            <img src="/images/logo_white.png"/>
+            <a href="/"><img src="/images/logo_white.png"/></a>
         </MatchingHeaderLogoDiv>
 
         <MatchingStageDiv>
@@ -23,9 +30,9 @@ const MatchingHeader = () => {
         <div>
             5 상세정보
         </div>
-        <div>
+        <MatchingExitBtn onClick={exit}>
             나가기
-        </div>
+        </MatchingExitBtn>
         </MatchingStageDiv>
         
     </MatchingHeaderContainer>

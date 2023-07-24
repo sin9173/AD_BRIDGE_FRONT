@@ -1,9 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import { MatchingWriteHeaderContainer, MatchingWriteHeaderLogoDiv, MatchingWriteStageDiv } from "../styles/matching/MatchingWriteHeaderStyles";
+import { MatchingExitBtn } from "../styles/matching/MatchingHeaderStyles";
 
 const MatchingWriteHeader = () => {
+    const navigate = useNavigate();
+
+    const exit = () => {
+        navigate("/");
+    }
+
     return <MatchingWriteHeaderContainer>
         <MatchingWriteHeaderLogoDiv>
-            <img src="/images/logo_white.png"/>
+            <a href="/"><img src="/images/logo_white.png"/></a>
         </MatchingWriteHeaderLogoDiv>
         <MatchingWriteStageDiv>
         <div>
@@ -21,9 +29,9 @@ const MatchingWriteHeader = () => {
         <div>
             5 상세정보
         </div>
-        <div>
+        <MatchingExitBtn onClick={exit}>
             나가기
-        </div>
+        </MatchingExitBtn>
         </MatchingWriteStageDiv>
     </MatchingWriteHeaderContainer>
 }

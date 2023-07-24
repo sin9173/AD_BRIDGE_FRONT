@@ -75,6 +75,9 @@ export const CompanyLinks = styled.div`
     justify-content: space-between;
     width: 400px;
     font-weight: 700;
+    div {
+        cursor: pointer;
+    }
     div:nth-child(1) {
         width: 100px;
     };

@@ -31,3 +31,7 @@ export const MatchingStageDiv = styled.div`
         padding: 10px;
     }
 `;
+
+export const MatchingExitBtn = styled.div`
+    cursor: pointer;
+`;

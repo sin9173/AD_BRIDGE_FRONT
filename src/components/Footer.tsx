@@ -1,11 +1,20 @@
 import { CompanyLinks, CustomCenter, FooterBlockDiv, FooterCompany, FooterContainer, FooterLogo, FooterWork, RequireBtn, WorkTime } from "../styles/FooterStyles";
 
 const Footer = () => {
+
+    const moveContract = () => {
+        window.location.href='/contract';
+    }
+
+    const movePersonal = () => {
+        window.location.href = '/personal';
+    }
+
     return <FooterContainer>
         <FooterBlockDiv>
         <FooterLogo>
             <div>
-            <img src="/images/footer_logo.png" alt="sample"/>
+            <a href="/"><img src="/images/footer_logo.png" alt="sample"/></a>
             </div>
         </FooterLogo>
         <FooterWork>
@@ -27,8 +36,8 @@ const Footer = () => {
         <FooterBlockDiv>
             <FooterCompany>
                 <CompanyLinks>
-                    <div>이용약관</div>
-                    <div>개인정보 처리방침</div>
+                    <div onClick={moveContract}>이용약관</div>
+                    <div onClick={movePersonal}>개인정보 처리방침</div>
                     <div>제휴'협력 문의</div>
                 </CompanyLinks>
                 <div>

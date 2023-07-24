@@ -9,13 +9,17 @@ export interface HeaderProps {
 }
 
 export const moveMain = () => {
+    window.location.href='/';
+}
+
+const moveMatch = () => {
     window.location.href='/match/start';
 }
 
 const Header:React.FC<HeaderProps> =  (props) => {
     return <HeaderContainer theme={{bgColor : props.bgColor, color:props.color}}>
             <TextHeaderBtn>
-                <CusorPointText>매칭서비스</CusorPointText>
+                <CusorPointText onClick={moveMatch}>매칭서비스</CusorPointText>
             </TextHeaderBtn>
             <TextHeaderBtn>
                 <CusorPointText onClick={moveMain}>기업소개</CusorPointText>
