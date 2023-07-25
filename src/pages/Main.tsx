@@ -8,7 +8,11 @@ const Main = () => {
     }
     return <div>
         <Header bgColor="white" color="black" logo="/images/logo_black.png"/>
-        <BackGroundUrl theme={{imgPath : ''}}>
+        <BackGroundUrl theme={{imgPath : '/video/banner.mp4'}}>
+            <video autoPlay muted loop>
+                <source src="/video/banner.mp4" type="video/mp4"></source>
+            </video>
+            <div className="caption">
             <div>
                 <div>
                     <MainAquaFont>AD Bridge 각 분야 전문 담당팀이</MainAquaFont><br/>
@@ -20,6 +24,9 @@ const Main = () => {
                     <AquaBtnNonAbsolte onClick={moveMatch} >매칭서비스 이용하기</AquaBtnNonAbsolte>
                 </div>
             </div>
+
+            </div>
+            
         </BackGroundUrl>
         <BackGroundImg>
             <img src="/images/main_1.jpg"></img>

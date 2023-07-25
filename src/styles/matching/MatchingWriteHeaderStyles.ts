@@ -34,3 +34,12 @@ export const MatchingWriteStageDiv = styled.div`
         margin-left: 30px;
     }
 `;
+
+interface IsSelected {
+    selected? : boolean;
+}
+
+export const WritingSpan = styled.span<IsSelected>`
+    cursor: pointer;
+    color: ${(props) => props.selected?'#2cb5a9':''};
+`;
