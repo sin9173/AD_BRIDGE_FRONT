@@ -29,7 +29,7 @@ const Header:React.FC<HeaderProps> =  (props) => {
             </HeaderLogo>
 
             <LoginBtn>
-                <CusorPointText>로그인</CusorPointText>
+                <CusorPointText><Link to={'/login'}>로그인</Link></CusorPointText>
             </LoginBtn>           
     </HeaderContainer>
 }

@@ -5,7 +5,7 @@ export const BackGroundUrl = styled.div`
     /* background: grey; */
     width: 100%;
     background-size: 100% 100%;
-    height: 1000px;
+    height: 800px;
 
     display: flex;
     align-items: center;
@@ -15,8 +15,12 @@ export const BackGroundUrl = styled.div`
     position: relative;
 
     video {
-        min-height: 100%;
+        /* min-height: 100%;
         min-width: 100%;
+
+        max-width: 100%;
+        max-height: 100%; */
+        width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;

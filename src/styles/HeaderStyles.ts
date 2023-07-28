@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
+    padding-left: 60px;
     display: flex;
-    width : 100vw;
+    width : 100%;
     align-items: center;
     background-color: ${props => props.theme.bgColor};
     color: ${props => props.theme.color};
     height: 16vh;
+    position: relative;
 `;
 
 // export const HeaderLogo = styled.div`
@@ -41,22 +43,33 @@ export const HeaderContainer = styled.div`
 //     cursor: pointer;
 // `;
 
+// export const HeaderLogo = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     justify-self: center;
+//     width: 50%;
+// `;
+
 export const HeaderLogo = styled.div`
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    width: 50%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* justify-self: center; */
+    /* width: 50%; */
+    position : absolute;
+    left: 42%;
 `;
 
 export const TextHeaderBtn = styled.div`
     width: 15vh;
     font-size: 13px;
     padding : 10px;
-    margin: 0px 30px 0px 30px;
+    margin: 0px 35px 0px 30px;
 `;
 
 export const LoginBtn = styled(TextHeaderBtn)`
-    display: flex;
+    /* display: flex; */
+    position: absolute;
+    right: 2%;
 `;
 
 export const CusorPointText = styled.h2`

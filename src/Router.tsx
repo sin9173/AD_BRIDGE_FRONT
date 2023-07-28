@@ -5,6 +5,8 @@ import Personal from "./pages/Personal";
 import Contract from "./pages/Contract";
 import MatchingStart from "./pages/matching/MatchingStart";
 import MatchingStage from "./pages/matching/MatchingStage";
+import Login from "./pages/member/Login";
+import SignUp from "./pages/member/SignUp";
 
 
 const router = createBrowserRouter([
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
             {
                 path: "contract",
                 element : <Contract/>
+            },
+            {
+                path: "login",
+                element : <Login/>
+            },
+            {
+                path: "signup",
+                element : <SignUp/>
             },
             {
                 path: "match",
