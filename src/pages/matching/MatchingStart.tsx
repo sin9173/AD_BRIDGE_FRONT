@@ -1,8 +1,14 @@
+import { currentMemberState } from "../../atoms/memberAtoms";
 import MatchingHeader from "../../components/MatchingHeader";
 import { AquaBtn, BackGroundImg } from "../../styles/MainStyled";
 
+import { useRecoilState } from 'recoil';
 
 const MatchingStart = () => {
+
+    const [currentMember, setCurrentMember] = useRecoilState(currentMemberState);
+
+
     const moveStage = () => {
         window.location.href='/match/stage';
     }

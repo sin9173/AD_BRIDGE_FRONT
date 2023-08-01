@@ -150,10 +150,18 @@ export const ConfirmSubContent = styled.div`
     }
 `;
 
+export const ConfirmSubContentDetail = styled(ConfirmSubContent) `
+    input {
+        height : 150px;
+    }
+`;
+
 export const SelectSpan = styled.span<IsSelected>`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    white-space: pre-wrap;
 
     text-align: center;
     font-size: 20px;

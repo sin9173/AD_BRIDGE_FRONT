@@ -1,3 +1,5 @@
+import { currentMemberState } from "../atoms/memberAtoms";
+import {useRecoilValue} from 'recoil';
 import Header from "../components/Header";
 import { AquaBtn, AquaBtnNonAbsolte, BackGroundImg, BackGroundUrl, MainAquaFont, MainWhiteFont } from "../styles/MainStyled";
 
@@ -6,8 +8,12 @@ const Main = () => {
     const moveMatch = () => {
         window.location.href='/match/start';
     }
+
+
+    const currentMember = useRecoilValue(currentMemberState);
+
     return <div>
-        <Header bgColor="white" color="black" logo="/images/logo_black.png"/>
+        <Header bgColor="white" color="black" logo="/images/logo_black.png" currentMember={currentMember}/>
         <BackGroundUrl theme={{imgPath : '/video/banner.mp4'}}>
             <video autoPlay muted loop>
                 <source src="/video/banner.mp4" type="video/mp4"></source>

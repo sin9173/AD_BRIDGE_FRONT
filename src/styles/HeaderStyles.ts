@@ -81,3 +81,21 @@ export const CursorPointImg = styled.img`
     z-index: 6;
     cursor: pointer;
 `;
+
+
+export const UserImg = styled.div`
+    width: 120px;
+    height: 35px;
+    padding: 10px;
+    border: 2px solid #2cb5a9;
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+`;

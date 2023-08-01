@@ -5,7 +5,8 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 
 import { createGlobalStyle } from 'styled-components';
-import { UserProvider } from './api/auth/UserContext';
+
+import { RecoilRoot } from 'recoil';
 
 const GlobalStyle = createGlobalStyle`
   a {
@@ -19,11 +20,11 @@ const GlobalStyle = createGlobalStyle`
 function Root() {
   return (
     <div className="App">
-      <UserProvider>
+      <RecoilRoot>
       <GlobalStyle/>
       <Outlet/>
       <Footer/>
-      </UserProvider>
+      </RecoilRoot>
     </div>
   );
 }
